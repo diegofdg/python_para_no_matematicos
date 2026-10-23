@@ -1,0 +1,10 @@
+n1 = int(input("Ingrese un número: "))
+n2 = int(input("Ingrese otro número: "))
+n3 = int(input("Ingrese un tercer número: "))
+
+if n1 >= n2 and n1 >= n3:
+    print(f"El número mayor es: {n1}")
+elif n2 >= n1 and n2 >= n3:
+    print(f"El número mayor es: {n2}")
+else:
+    print(f"El número mayor es: {n3}")
