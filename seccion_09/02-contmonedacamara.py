@@ -51,4 +51,20 @@ while True:
             x=int(Momentos["m10"]/Momentos["m00"])
             y=int(Momentos["m01"]/Momentos["m00"])
 
-            #if 
+            if area<9300 and area>8000:
+                font=cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(imagen_A6, "S/. 0.20",(x,y) , font, 0.75, (0,255,0),2)
+                suma1=suma1+0.2
+            
+            if area<7800 and area>6500:
+                font=cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(imagen_A6, "S/. 0.10",(x,y) , font, 0.75, (0,255,0),2)
+                suma2=suma2+0.1
+        total=suma1+suma2
+        print("Sumatoria total en Centimos:",round(total,2))
+        cv2.imshow("Imagen A6", imagen_A6)
+        cv2.imshow("camara", camara)
+    if cv2.waitKey(1) == ord('s'):
+        break
+capturavideo.release()
+cv2.destroyAllWindows()
